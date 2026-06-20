@@ -1,13 +1,34 @@
 body{
-background:#0f172a;
-color:white;
-font-family:Arial,sans-serif;
 margin:0;
 padding:0;
+font-family:Arial,sans-serif;
+color:white;
+background:#000;
 }
 
 html{
 scroll-behavior:smooth;
+}
+
+#bg-video{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+object-fit:cover;
+z-index:-2;
+}
+
+body::before{
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.45);
+z-index:-1;
 }
 
 .navbar{
@@ -15,77 +36,90 @@ position:fixed;
 top:0;
 left:0;
 width:100%;
-height:70px;
-background:rgba(0,0,0,0.85);
+padding:20px 50px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:0 30px;
 box-sizing:border-box;
 z-index:1000;
 }
 
 .logo{
-color:white;
-font-size:24px;
+font-size:28px;
 font-weight:bold;
 }
 
 .nav-links{
-display:flex;
 list-style:none;
-gap:25px;
+display:flex;
+gap:30px;
 margin:0;
 padding:0;
-}
-
-.nav-links li{
-list-style:none;
 }
 
 .nav-links a{
 color:white;
 text-decoration:none;
-font-weight:bold;
+font-weight:600;
 }
 
-.nav-links a:hover
-
 .hero{
-min-height:100vh;
+height:100vh;
 display:flex;
-flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-padding-top:70px;
 }
 
-h1{
-font-size:4rem;
-color:#ff69b4;
+.hero-content{
+max-width:900px;
 }
 
-.poem{
-font-size:22px;
-line-height:40px;
+.top-text{
+letter-spacing:5px;
+font-size:14px;
+}
+
+.hero h1{
+font-size:80px;
+margin:20px 0;
+color:white;
+}
+
+.line{
+width:80px;
+height:2px;
+background:white;
+margin:20px auto;
+}
+
+.hero-subtitle{
+font-size:24px;
+line-height:35px;
+}
+
+.explore-btn{
+display:inline-block;
+margin-top:30px;
+padding:15px 40px;
+border:2px solid white;
+border-radius:50px;
+color:white;
+text-decoration:none;
 }
 
 section{
-padding:80px 20px;
-}
-
-.timeline{
-max-width:1000px;
-margin:auto;
+padding:100px 20px;
+text-align:center;
 }
 
 .card{
-background:#1e293b;
-margin:20px auto;
-padding:20px;
-border-radius:15px;
+background:rgba(255,255,255,0.1);
+backdrop-filter:blur(10px);
 max-width:800px;
+margin:20px auto;
+padding:25px;
+border-radius:15px;
 }
 
 .gallery-grid{
@@ -99,35 +133,4 @@ width:100%;
 height:300px;
 object-fit:cover;
 border-radius:15px;
-transition:.3s;
-}
-
-.gallery-grid img:hover{
-transform:scale(1.05);
-}
-.gallery-grid img:hover{
-    transform:scale(1.05);
-}
-
-/* INGA IRUNDHU KEELA PASTE PANNU */
-
-#bg-video{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    z-index:-1;
-}
-
-body::before{
-    content:"";
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,0.45);
-    z-index:-1;
 }
