@@ -105,3 +105,29 @@ transition:.3s;
 .gallery-grid img:hover{
 transform:scale(1.05);
 }
+.gallery-grid img:hover{
+    transform:scale(1.05);
+}
+
+/* INGA IRUNDHU KEELA PASTE PANNU */
+
+#bg-video{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:-1;
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.45);
+    z-index:-1;
+}
